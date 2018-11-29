@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+html {
+  font-size: 62.5%;
+}
+
+	body{
+		overflow: hidden;
+		background-color: black;
+		color: #fff;
+  		font-family: 'Lato', sans-serif;
+ 		font-size: 2.4rem;
+	}
+	#myVideo {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%; 
+		filter: sepia(30%) opacity(40%);
+		min-height: 100%;
+	}
+	.parallelogram {
+      width: 400px;
+      height: 300px;
+      transform: rotate(25deg) skew(-155deg);
+      background: transparent;
+	  border: 1px solid black;
+	  position:absolute;
+	  transition: 1s;
+    }
+	/* left most */
+	#shape-first{
+		left: calc(50vw - 930.5px);
+		top: calc(-358.9px);
+	}
+	#shape-second{
+		left: calc(50vw - 600px - 330.5px);
+		top: calc(-318.9px + 332.7px - 40px);
+	}
+	#shape-third{
+		left: calc(50vw - 600px - 330.5px);
+		top: calc(-318.9px + 352.7px + 313px - 40px);
+	}
+	/* left-center */
+	#shape-fourth{
+		left: calc(50vw - 566px);
+		top: calc(-189px);
+	}
+	#shape-fifth{
+		left: calc(50vw - 566px);
+		top: calc(-149px + 332.7px - 40px);
+	}
+	#shape-sixth{
+		left: calc(50vw - 566px);
+		top: calc(-149px + 352.7px + 313px - 40px);
+	}
+	/* center */
+	#shape-seventh{
+		left: calc(-201.7px + 50vw);
+		top: calc(-352.5px);
+	}
+	#shape-eighth{
+		left: calc(-201.7px + 50vw);
+		top: calc(-19px);	
+	}
+	#shape-ninth{
+		left: calc(-201.7px + 50vw);
+		top: calc(40px + 313.5px - 40px);	
+	}
+	#shape-tenth{
+		left: calc(-201.7px + 50vw);
+		top: calc(373px + 313.5px - 40px);	
+	}
+	/* right-center */
+	#shape-eleventh{
+		left: calc(161.6px + 50vw);
+		top: calc(2*103.5px - 36.5px - 313px - 40px);
+	}
+	#shape-twelveth{
+		left: calc(161.6px + 50vw);
+		top: calc(150.5px);
+	}
+	#shape-thirteenth{
+		left: calc(161.6px + 50vw);
+		top: calc(2*103.5px + 3.5px + 313px - 40px);
+	}
+	/* right-most */
+	#shape-fourteenth{
+		left: calc(525.9px + 50vw);
+		top: calc(3*103.5px + 2.5px - 285.5px - 40px);
+	}
+	#shape-fifteenth{
+		left: calc(525.9px + 50vw);
+		top: calc(3*103.5px + 50px - 40px);
+	}
+	#shape-sixteenth{
+		left: calc(525.9px + 50vw);
+		top: calc(3*103.5px + 70px + 313px - 40px);
+	}
+	#shape-fifth div{
+		opacity: 0;
+		transition: 1s linear ;
+	}
+	#shape-fifth div:hover{
+		opacity: 0.8;
+		transition: 1s linear ;
+		background: url("https://lh4.googleusercontent.com/0u_qzofpHPK5cAP5TmHFFOrmRLaSwVajbeSkKMzGXGXgti4XQeof-3_xiL8DmztRMDxvwJCFrtcAXy40U98Q=w1304-h665") no-repeat ;
+		background-size: cover;
+		z-index: 50;
+	}
+	#shape-ninth div{
+		opacity: 0;
+		transition: 1s linear ;
+	}
+	#shape-ninth div:hover{
+		opacity: 0.8;
+		transition: 1s linear ;
+		background: url("https://lh4.googleusercontent.com/0u_qzofpHPK5cAP5TmHFFOrmRLaSwVajbeSkKMzGXGXgti4XQeof-3_xiL8DmztRMDxvwJCFrtcAXy40U98Q=w1304-h665") no-repeat ;
+		background-size: cover;
+		z-index: 50;
+	}
+	#shape-twelveth div{
+		opacity: 0;
+		transition: 1s linear ;
+	}
+	#shape-twelveth div:hover{
+		opacity: 0.8;
+		transition: 1s linear ;
+		background: url("https://lh4.googleusercontent.com/0u_qzofpHPK5cAP5TmHFFOrmRLaSwVajbeSkKMzGXGXgti4XQeof-3_xiL8DmztRMDxvwJCFrtcAXy40U98Q=w1304-h665") no-repeat ;
+		background-size: cover;
+		z-index: 50;
+	}
+	.header-circle{
+		height: 295px; 
+		width: 295px; 
+		border-radius: 50%; 
+		border: 2px dotted gray; 
+		transform: skew(-25deg) rotate(-25deg); 
+		background: url("https://lh4.googleusercontent.com/aJ407P9ca3u9HHO4ISW6-k7TP0YCRX66QAjLQFnpapN5N6niOrEbeyGCqCC60HhLxeYsakBDilsv3YxtlQW0=w1304-h665-rw") no-repeat  ;
+		background-size: cover;
+		margin: 0 auto; 
+		position: relative;
+	}
+	/*.header-circle:hover{
+		position: absolute;
+		top: 0px;
+		height: 100vh;
+		width: 100vw;
+		border-radius: 0px;
+		transition: 5s;
+		background-color: white;
+	}*/
+	.navigation-menu__bars, .navigation-menu__bars::before, .navigation-menu__bars::after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 25px;
+  background: #fff ;
+  position: absolute;
+  left: 0;
+  top: 48%;
+  display: block;
+  transition: all 0.3s;
+  z-index: 100;
+}
+.navigation-menu {
+  background-color: transparent;
+  height: 100%;
+  position: fixed;
+  width: 400px;
+  transform: translateX(-85%);
+  transition: transform 0.3s 0.3s;
+  z-index: 100;
+}
+.navigation-menu::before {
+  background: #525252;
+  content: '';
+  height: 400%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(40deg);
+  width: 100%;
+  z-index: 0;
+}
+.navigation-menu--open {
+  transform: translateX(0);
+}
+.navigation-menu--open .navigation-menu__bars {
+  background-color: transparent;
+}
+.navigation-menu--open .navigation-menu__bars::before, .navigation-menu--open .navigation-menu__bars::after {
+  top: 0;
+}
+.navigation-menu--open .navigation-menu__bars::before {
+  transform: rotate(45deg);
+}
+.navigation-menu--open .navigation-menu__bars::after {
+  transform: rotate(-45deg);
+}
+.navigation-menu--open .menu-list__item {
+  opacity: 1;
+}
+.navigation-menu--open .menu-list__item:nth-child(1) {
+  transition-delay: 1s;
+}
+.navigation-menu--open .menu-list__item:nth-child(2) {
+  transition-delay: 1.25s;
+}
+.navigation-menu--open .menu-list__item:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+.navigation-menu__toggle {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: 12px;
+  width: 30px;
+}
+.navigation-menu__bars::before, .navigation-menu__bars::after {
+  content: '';
+}
+.navigation-menu__bars::before {
+  left: 0;
+  top: -8px;
+}
+.navigation-menu__bars::after {
+  left: 0;
+  top: 8px;
+}
+.menu-list {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 10;
+}
+.menu-list__item {
+  margin: 40px 0;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s;
+}
+@media only screen and (max-width: 700px) {
+  .navigation-menu {
+    min-width: 240px;
+    width: 80%;
+  }
+  .navigation-menu::before {
+    width: 110%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navigation-menu {
+    background-color: #4e567e;
+    min-width: 240px;
+    width: 80%;
+  }
+  .navigation-menu::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+	
+</style>
+</head>
+<body>
+
+
+<nav class="navigation-menu js-nav-menu">
+  <div class="navigation-menu__toggle js-nav-menu-toggle">
+    <span class="navigation-menu__bars"></span>
+  </div>
+  <ul class="menu-list">
+    <li class="menu-list__item"><span style="cursor: pointer">Gallery</span></li>
+    <li class="menu-list__item"><span style="cursor: pointer">About</span></li>
+    <li class="menu-list__item"><span style="cursor: pointer">Contact</span></li>
+  </ul>
+</nav>
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+<div class="parallelogram " id="shape-first"></div>
+<div class="parallelogram " id="shape-second"></div>
+<div class="parallelogram " id="shape-third"></div>
+<div class="parallelogram " id="shape-fourth"></div>
+<div class="parallelogram " id="shape-fifth"><div style="height: 100%; width: 100%)"></div></div>
+<div class="parallelogram " id="shape-sixth"></div>
+<div class="parallelogram " id="shape-seventh"></div>
+<div class="parallelogram " id="shape-eighth">
+	<div class="header-circle"></div>
+</div>
+<div class="parallelogram " id="shape-ninth"><div style="height: 100%; width: 100%)"></div></div>
+<div class="parallelogram " id="shape-tenth"></div>
+<div class="parallelogram " id="shape-eleventh"></div>
+<div class="parallelogram " id="shape-twelveth"><div style="height: 100%; width: 100%)"></div></div>
+<div class="parallelogram " id="shape-thirteenth"></div>
+<div class="parallelogram " id="shape-fourteenth"></div>
+<div class="parallelogram " id="shape-fifteenth"></div>
+<div class="parallelogram " id="shape-sixteenth"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	(function($) {
+  $('.js-nav-menu-toggle').on('click', function() {
+    $(this).parents('.navigation-menu').toggleClass('navigation-menu--open');
+  });
+  
+  $('html').on('click', function(e) {
+    if(!$(e.target).closest('.js-nav-menu').length &&
+      ($('.js-nav-menu').hasClass('navigation-menu--open'))) {
+        $('.js-nav-menu').removeClass('navigation-menu--open');
+    }
+  });
+})(jQuery);
+</script>
+</body>
+</html>
