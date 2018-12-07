@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+  	
+	<title>Full page intro and navigation</title>
+	
+	<style>
+	@media only screen and (max-width: 1600px) {
+		.cd-header{
+			height: 12vh;
+		}
+		.custom1 div{
+			height: 53vh;
+		}
+		}
+	@media only screen and (max-width: 770px) {
+		.cd-header{
+			height: 7vh;
+		}
+		.custom1 div{
+			height: 58vh;
+		}
+		}
+	</style>
+</head>
+<body style="background-color: #85D9BF">
+
+	<section id="cd-intro">
+	<header class="cd-header" style="position: relative; ">
+			<div id="cd-logo"><a href="#0"><img src="./img/cd-logo.svg" alt="Logo"></a></div>
+			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span><br></a>
+		</header>
+		
+		<div class="custom1 owl-carousel">
+			<div style="background: url('./img/aa1.png.png'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/aa3.png'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/bg-img.jpg'); background-size: cover; background-position: center;">  </div>
+			<div style="background: url('./img/profile.jpg'); background-size: cover; background-position: center;">  </div>
+		</div>
+		<div class="owl-carousel-custom owl-carousel ">
+			<div style="height: 35vh;background-color: blue; border-radius: 5px; background: url('./img/random/petra.jpeg'); background-size: cover; ">  </div>
+			<div style="height: 35vh;background-color: red; border-radius: 5px; background: url('./img/random/coffee.jpg'); background-size: cover;">  </div>
+			<div style="height: 35vh;background-color: green; border-radius: 5px; background: url('./img/random/bookstore.jpg'); background-size: cover;">  </div>
+			<div style="height: 35vh;background-color: yellow; border-radius: 5px; background: url('./img/random/laptop.jpg'); background-size: cover;">  </div>
+			<div style="height: 35vh;background-color: gray; border-radius: 5px; background: url('./img/random/poverty.jpg'); background-size: cover;">  </div>
+			<div style="height: 35vh;background-color: white; border-radius: 5px; background: url('./img/random/sunset.jpg'); background-size: cover;">  </div>
+			<div style="height: 35vh;background-color: pink; border-radius: 5px; background: url('./img/random/classroom.jpg'); background-size: cover;">  </div>
+		</div>
+		
+	</section> <!-- cd-intro -->
+
+
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+	<ul>
+		<li><a href="#0"><span>Tour</span></a></li>
+		<li><a href="#0"><span>Pricing</span></a></li>
+		<li><a href="#0"><span>Labs</span></a></li>
+		<li><a href="#0"><span>About</span></a></li>
+		<li><a href="#0"><span>Contact us</span></a></li>
+	</ul>
+	<a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/owl.carousel.min.js"></script>
+<script>
+var owl = $('.owl-carousel-custom');
+owl.owlCarousel({
+slideTransition: 'linear',
+lazyLoadEager: 5,
+    items:4,
+    loop:true,
+    margin:5,
+	fluidSpeed: 3000,
+    autoplay:true,
+    autoplayTimeout:3500,
+    autoplayHoverPause:true,
+	responsiveClass:true,
+	dots: false,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1025:{
+            items:5,
+            nav:false,
+            loop:true
+        }
+    }
+});
+
+
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+});
+$('.custom1').owlCarousel({
+    animateOut: 'fadeOutLeft',
+    animateIn: 'fadeIn',
+	autoplay: true,
+	loop:true,
+	nav: false,
+	dots: false,
+	autoplayTimeout:1500,
+    autoplayHoverPause:true,
+    items:1,
+    margin:0,
+    stagePadding:0
+});
+
+</script>
+</body>
+</html>
