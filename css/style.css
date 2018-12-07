@@ -19,13 +19,13 @@ html, body {
   height: 100%;
 }
 
-body {
+body { /* The div that compresses the main page and fractionally loads the menu */
   font-size: 100%;
   font-family: "Ubuntu", sans-serif;
-  background-color: white;
+  background-color: green;
 }
 
-a {
+a { /* MENU word */
   color: white;
   text-decoration: none;
 }
@@ -35,18 +35,18 @@ a {
 Modules - reusable parts of our design
 
 -------------------------------- */
-.cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+/*.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width
   width: 90%;
   max-width: 768px;
   margin: 0 auto;
-}
-.cd-container::after {
-  /* clearfix */
+}*/
+/*.cd-container::after {
+  /* clearfix  
   content: '';
   display: table;
   clear: both;
-}
+}*/
 
 /* -------------------------------- 
 
@@ -59,7 +59,7 @@ Main components
   overflow: hidden;
   background-color: #3a393f;
   /* slightly visible only when we resize this element */
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
   z-index: 1;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
@@ -139,8 +139,8 @@ Main components
   }
 }
 
-.cd-blurred-bg {
-  /* we use jQuery to apply a mask to this element - CSS clip property */
+/*.cd-blurred-bg {
+  /* we use jQuery to apply a mask to this element - CSS clip property 
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +154,7 @@ Main components
 .no-js .cd-blurred-bg {
   display: none;
 }
-
+*/
 #cd-logo {
   position: absolute;
   left: 10px;
